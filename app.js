@@ -85,6 +85,8 @@ document.getElementById("copy").addEventListener("click", function () {
     campoDeTexto.select();
     campoDeTexto.setSelectionRange(0, 99999);
     document.execCommand("copy");
+    campoDeTexto.value = "";
+    campoDeTexto.blur();
 });
 
 function disableBtn() {
