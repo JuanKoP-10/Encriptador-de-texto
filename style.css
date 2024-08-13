@@ -272,6 +272,9 @@ button:hover{
     .copy{
         text-align: center;
     }
+    .sms:focus{
+        border: none;
+    }
 }
 /*Compatibilidad telefono*/
 
