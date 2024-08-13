@@ -1,0 +1,306 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+background-color: #F3F5FC;
+font-family: "inter", sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    position: relative;
+    margin: 0;
+    
+}
+/* Logo */
+.logo{
+    width: 10vw;
+}
+
+.logo img{
+    padding-left: 2em;
+    padding-top: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2em;
+} 
+
+ /*Entrada */
+
+.entrada-mensaje{
+    width: 60vw;
+    padding-top: 15vh;
+    display: flex;
+    justify-content: center;
+}
+.contenedor-caja-texto{
+    width: 90%;
+}
+.caja-texto{
+    width: 100%;
+    resize: none;
+    background: transparent;
+    font-size: 2em;
+    font-weight: 400;
+    border: none;
+    height: 60vh;
+    padding: 0%;
+    color: #0A3871;
+    font-weight: 500;
+
+}
+
+.caja-texto::placeholder{
+    color: #0A3871;
+}
+
+.caja-texto:focus{
+    outline: none;
+}
+
+.boton p{
+    color: #495057;
+    font-weight: 500;
+    display: flex;
+}
+
+.alert{
+    padding-right: 0.25em;
+}
+
+.boton{
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    padding-top: 1em;
+}
+
+main button{
+    padding: 1.5000em;
+    width: 100%;
+    border-radius: 1em;
+    border: none;
+    border: 2px solid #0A3871;
+    transition: border-color 250ms, backgraund-color 250ms;
+}
+
+.contenedor-botones{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.btn-encriptar{
+    background-color: #0A3871;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn-encriptar:disabled:hover{
+    cursor: not-allowed;
+}
+.btn-desencriptar:disabled:hover{
+    cursor: not-allowed;
+}
+
+.btn-desencriptar{
+    background-color: transparent;
+    color: #0A3871;
+    font-weight: 500;
+    border: 2px solid #0A3871;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.btn-encriptar:hover{
+    background-color: #2a69b5;
+    border-color: #2a69b5;
+}
+
+.btn-desencriptar:hover{
+    background-color: #d8dfe8;
+}
+
+/* salida*/
+
+.salida-mensaje{
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultado{
+    background-color: #fff;
+    height: 90vh;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2em;
+    box-shadow: 0em 0em 2em 0.1em #00000030;
+    -webkit-box-shadow: 0em 0em 2em 0.1em #00000030;
+    -moz-box-shadow: 0em 0em 2em 0.1em #00000030;
+}
+
+.mensaje{
+    overflow: auto;
+    margin-top: 3em;
+    
+}
+
+.sms{
+    width: 100%;
+    resize: none;
+    background: transparent;
+    border: none;
+    height: 60vh;
+    font-weight: 400;
+    font-size: 1.5em;
+    color: #0A3871;
+}
+
+.no-encontrado img{
+    width: 100%;
+}
+
+.no-encontrado, .encontrado{
+    padding: 2em;
+}
+
+.encontrado{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.encontrado button{
+    margin-bottom: 2em;
+}
+
+.encontrado{
+    display: none;
+}
+.btn-copiar{
+    background-color: transparent;
+    color: #0A3871;
+    font-weight: 500;
+    border: 2px solid #0A3871;
+    margin-top: 4em;
+}
+.btn-copiar:hover{
+    background-color: #d8dfe8;
+}
+
+.mensaje{
+    overflow: auto;
+    max-height: 100vh;
+}
+.no-encontrado{
+    text-align: center;
+}
+.no-encontrado p{
+    padding-top: 1em;
+}
+
+/*Compatibilidad mini pc*/
+@media screen and (max-width: 1400px){
+    .entrada-mensaje{
+        width: 50vw;
+    }
+    .salida-mensaje{
+        width: 40vw;
+    }
+}
+
+/*Compatibilidad tablet*/
+@media screen and (max-width: 1023px) {
+    main{
+        flex-direction: column;
+    }
+    .entrada-mensaje, .salida-mensaje, .logo{
+        width: 100%;
+    }
+    .logo{  
+        justify-content: flex-start;
+    }
+    .logo img{
+        padding-left: 2em;
+    }
+    .entrada-mensaje{
+        padding-top: 5vh;
+    }
+
+    .contenedor-caja-texto{
+        width: 100%;
+        padding: 2em;
+    }
+    .caja-texto{
+        height: 50vh;
+    }
+    .resultado{
+        width: 100%;
+        margin: 2em;
+        height: auto;
+    }
+
+    .mensaje{
+        max-height: 65vh;
+    }
+    .sms{
+        height: 50vh;
+        width: 80vw;
+        
+    }
+    .encontrado button{
+        margin-bottom: 0;
+    }
+    .no-encontrado img {
+        display: none;
+    }
+    .futer{
+        height: 0;
+    }
+    .copy{
+        text-align: center;
+    }
+}
+/*Compatibilidad telefono*/
+
+@media screen and (max-width:767px) {
+    .alert{
+        width: 5%;
+    }
+    .contenedor-botones{
+        flex-direction: column;
+    }
+    .no-encontrado img {
+        display: none;
+    }
+    .copy{
+        text-align: center;
+    }
+    .futer{
+        height: 0;
+    }
+
+}
+/*Pie de pagina*/
+footer{
+    position: absolute;
+    height: 4%;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+}
+.copy{
+    text-align: center;
+}

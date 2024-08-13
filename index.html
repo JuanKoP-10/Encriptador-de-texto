@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalizer.css">
+    <link rel="stylesheet" href="/style.css">
+ 
+</head>
+
+<body>
+    <main>
+        <!--Parte del logo-->
+        <div class="logo">
+            <img src="assets/Logo.png" alt="logo alura">
+        </div>
+        <!--Parte de la caja-->
+        <div class="entrada-mensaje">
+            <div class="contenedor-caja-texto">
+                <textarea class="caja-texto" placeholder="Ingrese el texto aqui" id="caja" spellcheck="false"></textarea>
+                <div class="boton">
+                    <p><img class="alert" src="assets/Vector.png" alt="alerta">Solo letras minusculas y sin acentos </p>
+                    <div class="contenedor-botones">
+                        <button class="btn-encriptar" id="btn-encriptar" onclick="btnEncriptar()" value="ocultar" disabled>Encriptar</button>
+                        <button class="btn-desencriptar" id="btn-desencriptar" onclick="btnDesencriptar()" disabled>Desencriptar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--parte de la respuesta-->
+        <div class="salida-mensaje">
+            <div class="resultado">
+                <div class="no-encontrado" id="noen">
+                    <img src="assets/Muñeco.png" alt="muñeco" id="pelaito">
+                    <h2>Ningun mensaje fue  encontrado</h2>
+                    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div class="encontrado" id="siu">
+                    <div class="mensaje">
+                        <textarea class="sms" type="mensaje" id="ecsms" spellcheck="false"></textarea>
+                    </div>
+                    <button class="btn-copiar" id="copy">Copiar</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Pie de pagina-->
+        <footer class="futer">
+            <p class="copy">@copyright 2024 - Encriptador de Texto - desarrollado por JuanKo</p>
+        </footer>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
